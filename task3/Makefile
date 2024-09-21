@@ -1,14 +1,14 @@
 # цель по умолчанию (при вызове make или make task3)
 # собираем программу task3 из объектного файла task3.o
-task3: main.o
-	gcc -g -O0 -o task3 main.o
+lychrel: lychrel.o
+	gcc -g -O0 -o lychrel lychrel.o
 
-main.o: main.c
-	gcc -g -O0 -c main.c
+lychrel.o: lychrel.c
+	gcc -g -O0 -c lychrel.c
 
 # цель clean (при вызове make clean)
 # удаляем программу и объектные файлы
 clean:
-	rm task3 *.o
+	rm lychrel *.o
 indent:
-	indent -kr -nut main.c
+	indent -kr -nut lychrel.c
