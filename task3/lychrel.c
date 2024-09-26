@@ -82,14 +82,12 @@ long reverse(long n)
     long r = 0;
 
     do {
+        if (r > ((LONG_MAX - n % 10) / 10)) {
+            return -1;
+	}
         r = r * 10 + n % 10;
         n /= 10;
     } while (n > 0);
-
-    /* Если обращение числа вызывает переполнение, то возвращаем -1 */
-    if (n > LONG_MAX - r) {
-        return -1;
-    }
 
     return r;
 }

@@ -21,3 +21,5 @@ clean:
 indent:
 	indent -kr -nut primes.c
 	indent -kr -nut goldbach.c
+
+.PHONY: all clean indent
