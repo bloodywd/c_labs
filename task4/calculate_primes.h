@@ -2,6 +2,6 @@
 #define CALCULATE_PRIMES_H
 
 
-void calculate_primes(char *primes, int n);
+void calculate_primes(int *primes, int n);
 
 #endif

@@ -1,6 +1,6 @@
 #include "calculate_primes.h"
 
-void calculate_primes(char *primes, int n)
+void calculate_primes(int *primes, int n)
 {
     /* 0 и 1 это не простые числа */
     primes[0] = 0;

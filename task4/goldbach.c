@@ -22,8 +22,13 @@ int main()
     scanf("%d %d", &n, &m);
 
     /* Выделяем в куче динамическую память */
-    char *primes = (char *) malloc((m + 1) * sizeof(char));
+    int *primes = (int *) malloc((m + 1) * sizeof(int));
 
+    /* Проверка выделения */
+    if (primes == NULL) {
+        fprintf(stderr, "Недостаточно памяти.\n");
+        exit(EXIT_FAILURE);
+    }
 
     /* Находим все простые числа до верхней границы */
     calculate_primes(primes, m);

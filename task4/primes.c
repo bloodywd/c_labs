@@ -21,7 +21,15 @@ int main()
     scanf("%d", &n);
 
     /* Выделяем в куче память для массива индикаторов */
-    char *primes = (char *) malloc((n + 1) * sizeof(char));
+    int *primes = (int *) malloc((n + 1) * sizeof(int));
+
+    /* Проверка выделения */
+
+    if (primes == NULL) {
+        fprintf(stderr, "Недостаточно памяти.\n");
+        exit(EXIT_FAILURE);
+    }
+
 
     /* Заполняем массив индикаторов */
     calculate_primes(primes, n);
